@@ -23,6 +23,9 @@ const Render = ({galaxies, planets}) => {
         );
       })}
 
+      
+
+
       {planets && planets.map((planet) => {
         return (
           <div key={JSON.stringify(planet)} className="planet--card">

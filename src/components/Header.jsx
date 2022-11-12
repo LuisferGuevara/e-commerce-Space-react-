@@ -1,18 +1,25 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import "../styles/Header.scss"
+import "../styles/Header.scss";
+import { useSelector } from "react-redux";
+import Logout from "./Logout";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu);
   };
+
+  const { displayClass } = useSelector((state) => state.header);
+
   return (
-    <header className="header">
-      <Link to={""}>
+    <header className={displayClass}>
+
+      <Link to={"corp"}>
         <p>CAPSULE CORP.</p>
       </Link>
+
       <button onClick={toggleMenu} className="header-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -28,10 +35,11 @@ const Header = () => {
           />
         </svg>
       </button>
+
       <nav className={`header-nav ${menu ? "is--active" : ""}`}>
         <ul className="header-ul">
           <li className="header-li">
-            <NavLink to="" activeclassname={"active"}>
+            <NavLink to="corp" activeclassname={"active"}>
               Home
             </NavLink>
           </li>
@@ -50,15 +58,11 @@ const Header = () => {
               Store
             </NavLink>
           </li>
+          <li className="header-li">
+            <Logout />
+          </li>
         </ul>
       </nav>
-     
-      <NavLink to="register" activeclassname={"active"}>
-              Register
-            </NavLink>
-            <NavLink to="login" activeclassname={"active"}>
-              Login
-            </NavLink>
     </header>
   );
 };

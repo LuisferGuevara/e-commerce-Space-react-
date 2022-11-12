@@ -1,15 +1,22 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { logOutUser } from '../redux/Auth/auth.actions';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { logOutUser } from "../redux/Auth/auth.actions";
 
 const Logout = () => {
-    const dispatch = useDispatch();
-    const logOut =()=>{
-        dispatch(logOutUser());
-    }
-  return (
-    <button onClick={logOut}>Log out</button>
-  )
-}
+    
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-export default Logout
+  const logOut = () => {
+    dispatch(logOutUser(navigate));
+    dispatch({ type: "original" });
+  };
+  return (
+    <button onClick={logOut} className="log--out">
+      Log out
+    </button>
+  );
+};
+
+export default Logout;

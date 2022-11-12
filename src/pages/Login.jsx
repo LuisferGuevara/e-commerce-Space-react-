@@ -1,15 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../redux/Auth/auth.actions";
+import "../styles/Welcome.scss"
 
 const Login = () => {
+
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = async (data) => {
@@ -17,7 +20,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login--container">
       <h1>Login</h1>
       <form onSubmit={handleSubmit(login)}>
         <label>
@@ -28,7 +31,7 @@ const Login = () => {
               required: "Enter an email",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i,
-                message: "Thats not a valid email",
+                message: "Invalid email",
               },
             })}
           />
@@ -43,8 +46,12 @@ const Login = () => {
           Password
           <input type="password" {...register("password")} />
         </label>
-        <button disabled={!isValid}>Enviar</button>
+        <button disabled={!isValid} onClick={() => dispatch({ type: "setClass" })} className="glow-on-hover" >
+          Send
+        </button>
       </form>
+      <span>New to Capsule Corp?</span>
+      <Link to="/register" className="glow-on-hover" >Register Yourself</Link>
     </div>
   );
 };

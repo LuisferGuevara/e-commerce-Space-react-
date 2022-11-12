@@ -3,21 +3,27 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { newUser } from "../redux/Auth/auth.actions";
+import "../styles/Register.scss"
 
 const Register = () => {
+
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const registerUser = async (data) => {
     dispatch(newUser(data, navigate));
   };
 
   return (
-    <div>
+    <div className="register--box">
+
+    <div className="register--container">
       <h1>Register</h1>
       <form onSubmit={handleSubmit(registerUser)}>
         <label>
@@ -43,8 +49,9 @@ const Register = () => {
           Password
           <input type="password" {...register("password")} />
         </label>
-        <button disabled={!isValid}>Enviar</button>
+        <button disabled={!isValid} className="glow-on-hover">Send</button>
       </form>
+    </div>
     </div>
   );
 };

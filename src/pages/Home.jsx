@@ -1,16 +1,20 @@
-import React from 'react'
-import Logout from '../components/Logout'
-import "../styles/Home.scss"
-
+import React from "react";
+import "../styles/Home.scss";
 
 const Home = () => {
   return (
-    <div className='main--container'>
-        <h1>WORKS!!!!</h1>
-    <Logout/>
-        {/* <img src='/assets/nasa-rocket.jpeg' alt="rocket" className="bg-imagen"/> */}
-    </div>
-  )
-}
+    <>
+      <div className="main--container">
+      <div className="image--box">
+      <img src="/assets/nasa-rocket.jpeg" alt="rocket" className="bg--image"/>
+      </div>
+      <div className="title">
+        <h1>SPACE TOURISM WITH CAPSULE CORP.</h1>
+        <button>Discover More</button>
+      </div>
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,111 +1,118 @@
-h2{
-    text-transform: uppercase;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 1.5em;
-    letter-spacing: 1px;
+h2 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1.5em;
+  letter-spacing: 1px;
+}
+.welcome_header {
+  display: none;
+}
+.log--out {
+  background-color: #996a6e;
+  padding: 2px 4px;
+
+  border-radius: 4px;
 }
 .header {
-    background-color: rgba(245, 245, 245, 0.567);
-    width: 100%;
-    padding: 1em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    border-bottom: px solid whitesmoke;
-    .logo {
-      height: 100%;
-      width: 200px;
-    }
-    a {
-      text-decoration: none;
-      background-image: -webkit-linear-gradient(
-        left,
-        white 25%,
-        #fde071 37.5%,
-        #ef9671,
-        #996a6e 62.5%,
-        white 75%
-      );
-      background-image: linear-gradient(
-        90deg,
-        white 25%,
-        #fde071 37.5%,
-        #ef9671,
-        #996a6e 62.5%,
-        white 75%
-      );
-      background-position: right center;
-      background-size: 400% auto;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: white;
-      -webkit-text-fill-color: transparent;
-      transition: color 200ms linear;
-      font-size: 1.2em;
-  
-      &:hover {
-        transform: scale(1.1);
-        background-position: left center;
-        color: #ef9671;
-        transition: background-position 2000ms ease-out;
-        font-weight: bold;
-      }
-    }
-    .header-svg {
-      fill: white;
-      width: 2em;
-      height: 2em;
-    }
-    .linkedin--icon{
-      font-size: 40px;
-    }
-    button {
-      display: none;
-      cursor: pointer;
-  
-      @media screen and (max-width: 800px) {
-        display: flex;
-      }
-    }
-    .header-nav {
-  
-      @media screen and (max-width: 800px) {
-        width: 100%;
-        height: 0vh;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        opacity: 0;
-        transition: all .5s ease;
-      }
-        
-      .header-ul {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        @media screen and (max-width: 800px) {
-          flex-direction: column;
-        }
-        li {
-          margin: 0 0.5em;
-          @media screen and (max-width: 800px) {
-            margin: 0.5em 0;
-          }
-        }
-      }
-    }
-    .is--active{
-      @media screen and (max-width: 800px) {
-          height: 25vh;
-          opacity: 1;
-  
-         
-    }}
+  background-color: #000200;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-bottom: px solid whitesmoke;
+  .logo {
+    height: 100%;
+    width: 200px;
   }
-  
+  a {
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(
+      left,
+      white 25%,
+      #fde071 37.5%,
+      #ef9671,
+      #996a6e 62.5%,
+      white 75%
+    );
+    background-image: linear-gradient(
+      90deg,
+      white 25%,
+      #fde071 37.5%,
+      #ef9671,
+      #996a6e 62.5%,
+      white 75%
+    );
+    background-position: right center;
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    transition: color 200ms linear;
+    font-size: 1.2em;
+
+    &:hover {
+      transform: scale(1.1);
+      background-position: left center;
+      color: #ef9671;
+      transition: background-position 2000ms ease-out;
+      font-weight: bold;
+    }
+  }
+  .header-svg {
+    fill: white;
+    width: 2em;
+    height: 2em;
+  }
+  .linkedin--icon {
+    font-size: 40px;
+  }
+  .header-button {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+    }
+  }
+  .header-nav {
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      height: 0vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .header-ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+      }
+      li {
+        margin: 0 0.5em;
+        @media screen and (max-width: 800px) {
+          margin: 0.5em 0;
+        }
+      }
+    }
+  }
+  .is--active {
+    @media screen and (max-width: 800px) {
+      height: 25vh;
+      opacity: 1;
+    }
+  }
+}
