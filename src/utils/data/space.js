@@ -1,15 +1,17 @@
 export const SPACE = {
   planets: [
     {
+        id: 1,
       name: "Venus",
       image:
         "https://www.nationalgeographic.com.es/medio/2022/07/31/el-planeta-venus_ed75a16a_1200x630.jpg",
       distance: "255m km",
       gravity: "3 months",
-      description:"To develop!!!!",
+      description: "To develop!!!!",
     },
     {
-      name: "Mercury",
+      id:2,
+        name: "Mercury",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/800px-Mercury_in_true_color.jpg",
       distance: "2.8 months",
@@ -17,14 +19,14 @@ export const SPACE = {
     },
     {
       name: "Moon",
-      image: "https://en.wikipedia.org/wiki/Moon#/media/File:FullMoon2010.jpg",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Moon.JPG/1024px-Moon.JPG",
       distance: "Half a day",
       gravity: "1.62 m/s2",
     },
     {
       name: "Mars",
       image:
-        "https://ca.wikipedia.org/wiki/Mart_(planeta)#/media/Fitxer:OSIRIS_Mars_true_color.jpg",
+"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1024px-OSIRIS_Mars_true_color.jpg",
       distance: "1 week",
       gravity: "3.72 m/s2",
     },
@@ -37,14 +39,14 @@ export const SPACE = {
     {
       name: "Saturn",
       image:
-        "https://es.wikipedia.org/wiki/Saturno_(planeta)#/media/Archivo:Saturn_during_Equinox.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saturn_%28planet%29_large_rotated.jpg/1200px-Saturn_%28planet%29_large_rotated.jpg",
       distance: "2 months",
       gravity: "10.44 m/s2",
     },
     {
       name: "Uranus",
       image:
-        "https://e7.pngegg.com/pngimages/58/47/png-clipart-planet-solar-system-neptune-uranus-knowledge-real-miscellaneous-blue.png",
+"https://st3.depositphotos.com/1005844/12662/i/600/depositphotos_126626300-stock-photo-planet-uranus-with-nasa-textures.jpg",
       distance: "4 months",
       gravity: "8.87 m/s2",
     },
@@ -99,10 +101,9 @@ export const SPACE = {
       distance: "2 years sleeping",
     },
     {
-        name: "Black Hole",
-        distance:"No go back",
-        image:"https://cdn.mos.cms.futurecdn.net/4Vv43ekp8QVwL95So7Z8sb.jpg",
-        
-    }
+      name: "Black Hole",
+      distance: "No go back",
+      image: "https://cdn.mos.cms.futurecdn.net/4Vv43ekp8QVwL95So7Z8sb.jpg",
+    },
   ],
 };
