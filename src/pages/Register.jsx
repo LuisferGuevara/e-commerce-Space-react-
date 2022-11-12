@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { API } from "../services/api";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { newUser } from "../redux/Auth/auth.actions";
 
 const Register = () => {
   const {
@@ -8,15 +10,15 @@ const Register = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
-  const registerUser = async (data) =>{
-    console.log(data)
-    const result = await API.post("/users/createNewUser", data)
-    console.log(result);
-  }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const registerUser = async (data) => {
+    dispatch(newUser(data, navigate));
+  };
 
   return (
     <div>
-      <h1>Login</h1>
+      <h1>Register</h1>
       <form onSubmit={handleSubmit(registerUser)}>
         <label>
           Email

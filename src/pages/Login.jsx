@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { API } from "../services/api";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { loginUser } from "../redux/Auth/auth.actions";
 
 const Login = () => {
   const {
@@ -8,13 +10,11 @@ const Login = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
-  const login = async (data) =>{
-    console.log(data)
-    const result = await API.post("/users/login", data)
-    localStorage.setItem("token", result.data.token)
-    console.log(result);
-
-  }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const login = async (data) => {
+    dispatch(loginUser(data, navigate));
+  };
 
   return (
     <div>
