@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { API } from "../services/api";
 
 const Login = () => {
   const {
@@ -9,6 +10,9 @@ const Login = () => {
   } = useForm();
   const login = async (data) =>{
     console.log(data)
+    const result = await API.post("/users/login", data)
+    localStorage.setItem("token", result.data.token)
+    console.log(result);
 
   }
 

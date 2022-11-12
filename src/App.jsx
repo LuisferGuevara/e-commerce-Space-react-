@@ -1,10 +1,8 @@
 import "./App.scss";
-import { Galaxies, Planets, Home, Store } from "./pages/Index";
+import { Galaxies, Planets, Home, Store, PlanetInfo, Login, Register } from "./pages/Index";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
-import PlanetInfo from "./pages/PlanetInfo";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+
 
 
 function App() {

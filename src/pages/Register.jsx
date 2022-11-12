@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { API } from "../services/api";
 
 const Register = () => {
   const {
@@ -9,7 +10,8 @@ const Register = () => {
   } = useForm();
   const registerUser = async (data) =>{
     console.log(data)
-
+    const result = await API.post("/users/createNewUser", data)
+    console.log(result);
   }
 
   return (
