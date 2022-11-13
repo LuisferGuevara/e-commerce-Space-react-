@@ -4,15 +4,15 @@ export const SPACE = {
       name: "Venus",
       image:
         "https://www.nationalgeographic.com.es/medio/2022/07/31/el-planeta-venus_ed75a16a_1200x630.jpg",
-      distance: "255m km",
-      gravity: "3 months",
-      description: "To develop!!!!",
+      distance: "THE DISTANCE IS .......... 255M KM .... AND ......",
+      gravity: "WE CANNOT LAND HERE BEACAUSE GRAVITY FORCE IS HECY AND .....",
+      description: " ONLY THIS WEEK!!  WE FEOREO The distance of this journey is about 2.8 months .chibdslaifbldsaihbflsadibfsdbflsdhibf.idsbhflhbsdlIHFBLAISDHBFLDBGLIBLIGHGFDHGBAFLS",
     },
     {
       name: "Mercury",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/800px-Mercury_in_true_color.jpg",
-      distance: "2.8 months",
+      distance: "The distance of this journey is about 2.8 months .chibdslaifbldsaihbflsadibfsdbflsdhibf.idsbhflhbsdlIHFBLAISDHBFLDBGLIBLIGHGFDHGBAFLS",
       gravity: "3.7 m/s2",
     },
     {
@@ -20,7 +20,7 @@ export const SPACE = {
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Moon.JPG/1024px-Moon.JPG",
       distance: "Half a day",
       gravity: "1.62 m/s2",
-      moon: true
+      moon: true,
     },
     {
       name: "Mars",
@@ -55,6 +55,7 @@ export const SPACE = {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Neptune.jpg/596px-Neptune.jpg",
       distance: "4 months",
       gravity: "11.5 m/s2",
+      description:"cdjcndsñiuvncodsubn",
     },
     {
       name: "Pluto",
@@ -75,7 +76,7 @@ export const SPACE = {
       image: "https://www.universetoday.com/wp-content/uploads/2016/04/titan_large.jpg",
       distance: "2 months",
       gravity: "1.35 m/s2",
-      moon:true,
+      moon: true,
     },
   ],
   galaxies: [

@@ -16,7 +16,7 @@ export const newUser = (data, navigate) => async (dispatch) => {
   try {
     const result = await API.post("users/createNewUser", data);
     dispatch({ type: "register_user_ok", payload: result.data });
-    navigate("/login");
+    navigate("/");
   } catch (error) {
     dispatch({ type: "register_user_error", payload: error.message });
   }

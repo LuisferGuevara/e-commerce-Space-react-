@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../redux/Auth/auth.actions";
-import "../styles/Welcome.scss"
+import "../styles/Login.scss"
+
 
 const Login = () => {
 
@@ -20,7 +21,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login--container">
+    <div className="login--container login-container-2">
       <h1>Login</h1>
       <form onSubmit={handleSubmit(login)}>
         <label>

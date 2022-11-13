@@ -192,14 +192,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  background: rgb(180, 58, 168);
-  background: linear-gradient(
-    49deg,
-    rgba(180, 58, 168, 1) 10%,
-    rgba(31, 246, 190, 1) 48%,
-    rgba(8, 3, 91, 1) 92%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background-image:url("../public/assets/stars.jpeg");
+  background-position: center;
+  background-size: contain;
+  // background: rgb(180, 58, 168);
+  // background: linear-gradient(
+  //   49deg,
+  //   rgba(180, 58, 168, 1) 10%,
+  //   rgba(31, 246, 190, 1) 48%,
+  //   rgba(8, 3, 91, 1) 92%,
+  //   rgba(252, 176, 69, 1) 100%
+  // );
 }
 
 code {
