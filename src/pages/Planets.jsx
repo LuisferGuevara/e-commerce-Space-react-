@@ -29,11 +29,14 @@ const Planets = () => {
 
   return (
     <div className="planets--section">
-      <div>
+      <div className="planets--box-1">
         <h2 className="h2">These are the Planets we offer to travel!</h2>
+        <div className="filter--buttons-planets">
+
         <button onClick={showAll}>ALL</button>
         <button onClick={showPlanets}>PLANETS</button>
         <button onClick={showMoons}>MOONS</button>
+        </div>
       </div>
       {/* REFACTORIZAR !!!!!! */}
       <div className="planets--billboard"> 

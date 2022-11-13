@@ -10,7 +10,7 @@ const Home = () => {
       </div>
       <div className="title">
         <h1>SPACE TOURISM WITH CAPSULE CORP.</h1>
-        <button>Discover More</button>
+        <button className="button">Discover More</button>
       </div>
       </div>
     </>
