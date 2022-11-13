@@ -84,7 +84,7 @@ export const SPACE = {
       name: "Alpha Centauri",
       image:
         "https://c4.wallpaperflare.com/wallpaper/597/955/680/sci-fi-galaxy-cosmos-planet-wallpaper-preview.jpg",
-      distance: "2 years sleeping",
+      distance: "2 years sleeping Lorem ijfbliuawberfilauwbrlafibrifubrlwiaqfublqriubflwairubliv.hbvluiebfliberlifublqhirwb" ,
     },
     {
       name: "Andromeda",
