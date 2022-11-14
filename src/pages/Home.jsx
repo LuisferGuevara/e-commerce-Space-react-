@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import "../styles/Home.scss";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(()=>{dispatch({type:"setClass"},)},[dispatch])
   return (
     <>
       <div className="main--container">

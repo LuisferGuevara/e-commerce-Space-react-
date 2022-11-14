@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../redux/Auth/auth.actions";
 import "../styles/Login.scss"
@@ -11,10 +11,11 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
 } = useForm();
-console.log(errors)
 
+const { error } = useSelector(state => state.auth)
+console.log("QUE HACER",error) 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = async (data) => {
@@ -49,7 +50,7 @@ console.log(errors)
           Password
           <input type="password" {...register("password")} />
         </label>
-        <button  onClick={() => isValid && dispatch({ type: "setClass" })} className="glow-on-hover" >
+        <button className="glow-on-hover" >
           Send
         </button>
       </form>

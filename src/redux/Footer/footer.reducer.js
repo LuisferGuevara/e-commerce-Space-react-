@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   const footerReducer = (state = INITIAL_STATE, action) => {
       
     const trial = {
-      setClass: { ...state, showClass: "footer" },
+      setClass: { ...state, showClass: "footer__menu" },
       original: { ...INITIAL_STATE },
     };
     return trial[action.type] || state;

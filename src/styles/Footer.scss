@@ -1,39 +1,165 @@
 .welcome_footer {
   display: none;
 }
-.footer {
+// }
+// .footer {
+//   background-color: #000200;
+//   height: 100%;
+//   width: 100%;
+//   padding: 1em;
+//   display: flex;
+//   justify-content: space-between;
+
+//   @media screen and (max-width: 1200px) {
+//     justify-content: space-around;
+//   }
+//   ul {
+//     display: flex;
+//     width: 20%;
+//     justify-content: space-between;
+//     @media screen and (max-width: 1200px) {
+//       flex-direction: column;
+//       align-items: center;
+//     }
+//     @media screen and (max-width:800px) {
+//         flex-direction: column;
+//         width: 100%;
+
+//     }
+
+//     &:last-of-type {
+//     }
+//     a {
+//       font-weight: 600;
+//       &:hover {
+//         background-color: white;
+//         border: 12px;
+//         color: #000200;
+//       }
+//     }
+//   }
+// }
+
+footer {
   background-color: #000200;
-  height: 100%;
+  height: fit-content;
   width: 100%;
-  padding: 1em;
   display: flex;
-  justify-content: space-between;
-
-  @media screen and (max-width: 1200px) {
-    justify-content: space-around;
-  }
-  ul {
+  .footer__menu {
+    height: fit-content;
+    padding-bottom: 0.5em;
     display: flex;
-    width: 20%;
-    justify-content: space-between;
-    @media screen and (max-width: 1200px) {
-      flex-direction: column;
-      align-items: center;
+    width: 100%;
+
+    .chevron {
+      color: white;
+      width: fit-content;
+      transform: translateY(5px);
+      cursor: pointer;
     }
-    @media screen and (max-width:800px) {
-        flex-direction: column;
+    .footer__menu--list {
+      display: flex;
+      list-style: none;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+
+      li {
+        text-align: center;
         width: 100%;
-        
+        height: auto;
+        padding-top: 20px;
+
+        a {
+          color: white;
+          font-size: 0.9em;
+          font-weight: bold;
+          display: inline-block;
+          margin-right: 10px;
+        }
+        label {
+          display: inline-block;
+          width: fit-content;
+        }
+        .footer__sublist {
+          display: none;
+        }
+      }
+
+      #footer__btn1 {
+        visibility: hidden;
+        display: inline-block;
+      }
+      #footer__btn2 {
+        visibility: hidden;
+        display: inline-block;
+      }
+      #footer__btn3 {
+        visibility: hidden;
+        display: inline-block;
+      }
     }
 
-    &:last-of-type {
+    .footer__btn1:checked:checked ~ label svg {
+      transform: rotate(90deg);
     }
-    a {
-      font-weight: 600;
-      &:hover {
-        background-color: white;
-        border: 12px;
-        color: #000200;
+    .footer__btn2:checked:checked ~ label svg {
+      transform: rotate(90deg);
+    }
+    .footer__btn3:checked:checked ~ label svg {
+      transform: rotate(90deg);
+    }
+
+    .footer__btn1:checked:checked ~ .footer__sublist--1 {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+      width: 100%;
+      height: auto;
+      a {
+        margin: 0;
+        font-size: 0.9em;
+        color: gray;
+        font-weight: 400;
+      }
+    }
+    .footer__btn1:checked:checked ~ .footer__sublist--1 {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+      width: 100%;
+      height: auto;
+      a {
+        margin: 0;
+        font-size: 0.9em;
+        color: gray;
+        font-weight: 400;
+      }
+    }
+    .footer__btn2:checked:checked ~ .footer__sublist--2 {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+      width: 100%;
+      height: auto;
+      a {
+        margin: 0;
+        font-size: 0.9em;
+        color: gray;
+        font-weight: 400;
+      }
+    }
+    .footer__btn3:checked:checked ~ .footer__sublist--3 {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+      width: 100%;
+      height: auto;
+      a {
+        margin: 0;
+        font-size: 0.9em;
+        color: gray;
+        font-weight: 400;
       }
     }
   }

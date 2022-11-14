@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Paragraph = ({text}) => {
-  return (
-    <p>{text}</p>
-  )
-}
+const Paragraph = ({ text }) => {
+  return <p>{text}</p>;
+};
 
-export default Paragraph
+export default Paragraph;

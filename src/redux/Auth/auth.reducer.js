@@ -14,6 +14,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
         logout_user_error: { ...state, error: action.payload },
         user_checksession: { ...state, token: action.payload },
     };
+    
     return trial[action.type] || state;
 };
 
