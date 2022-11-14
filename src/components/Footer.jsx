@@ -10,15 +10,15 @@ const Footer = () => {
         <ul className="footer__menu--list">
           <li>
             <a href="nowhere">Sponsors</a>
-            <input type="checkbox" id="footer__btn1" class="footer__btn1" />
-            <label for="footer__btn1" class="footer__btn1">
+            <input type="checkbox" id="footer__btn1" className="footer__btn1" />
+            <label htmlFor="footer__btn1" className="footer__btn1">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="chevron"
+                  className="chevron"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -28,7 +28,7 @@ const Footer = () => {
                 </svg>
               </span>
             </label>
-            <ul class="footer__sublist footer__sublist--1">
+            <ul className="footer__sublist footer__sublist--1">
               <li>
                 <NavLink to="https://www.spacex.com/" target="_blank">
                   SPACE X
@@ -48,15 +48,15 @@ const Footer = () => {
           </li>
           <li>
             <a href="nowhere">Terms and Use</a>
-            <input type="checkbox" id="footer__btn2" class="footer__btn2" />
-            <label for="footer__btn2" class="footer__btn2">
+            <input type="checkbox" id="footer__btn2" className="footer__btn2" />
+            <label htmlFor="footer__btn2" className="footer__btn2">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="chevron"
+                  className="chevron"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -66,7 +66,7 @@ const Footer = () => {
                 </svg>
               </span>
             </label>
-            <ul class="footer__sublist footer__sublist--2">
+            <ul className="footer__sublist footer__sublist--2">
               <li>
                 <a href="/">Privacy</a>
               </li>
@@ -80,15 +80,15 @@ const Footer = () => {
           </li>
           <li>
             <a href="nowhere">Discover</a>
-            <input type="checkbox" id="footer__btn3" class="footer__btn3" />
-            <label for="footer__btn3" class="footer__btn3">
+            <input type="checkbox" id="footer__btn3" className="footer__btn3" />
+            <label htmlFor="footer__btn3" className="footer__btn3">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="chevron"
+                  className="chevron"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -99,7 +99,7 @@ const Footer = () => {
               </span>
             </label>
 
-            <ul class="footer__sublist footer__sublist--3">
+            <ul className="footer__sublist footer__sublist--3">
               <li>
                 <a href="/">VR Experience</a>
               </li>

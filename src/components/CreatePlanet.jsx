@@ -13,7 +13,9 @@ const CreatePlanet = () => {
     const create = async (data) =>{
         dispatch(createPlanet(data, navigate))
     }
-  return <div>
+  return (
+  <div className="creating--box">
+  <h2>LET'S BE RICHER. LET'S CREATE A NEW OFFER</h2>
     <form onSubmit={handleSubmit(create)} className="create--form">
         <label>
           Name
@@ -39,7 +41,7 @@ const CreatePlanet = () => {
         </label>
         <button className="glow-on-hover">Send</button>
       </form>
-  </div>;
+  </div>);
 };
 
 export default CreatePlanet;

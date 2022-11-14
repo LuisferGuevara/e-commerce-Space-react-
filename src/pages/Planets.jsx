@@ -4,50 +4,47 @@ import Render from "../components/Render";
 import { useDispatch, useSelector } from "react-redux";
 import { getPlanets } from "../redux/Planets/planets.action";
 
-
-
 const Planets = () => {
-
   const dispatch = useDispatch();
-  const { filter } = useSelector((state) => state.planetsFilter);
-  console.log(filter);
+  const { filter, planets } = useSelector((state) => state.planetsFilter);
 
-  useEffect(()=>{
-    dispatch(getPlanets())},[dispatch])
 
-  
-  // const showAll = async () => {
-  //   dispatch({type:"setFilter", payload:planets})
-  // };
+  useEffect(() => {dispatch(getPlanets());}, [dispatch]);
+  useEffect(() => {dispatch({type:"setFilter", payload:planets});}, [dispatch, planets]);
 
-  // const showPlanets = async () => {
-  //   const planetsFilter = planets.filter((planet) => {
-  //     return !planet.moon;
-  //   });
-  //   dispatch({ type: "setFilter", payload:planetsFilter });
-  // };
+  const showAll = async () => {
+    dispatch({type:"setFilter", payload:planets})
+  };
 
-  // const showMoons = async () => {
-  //   const moonsFilter = planets.filter((planet) => {
-  //     return planet.moon;
-  //   });
-  //   dispatch({ type: "setFilter", payload:moonsFilter });
-  // };
+  const showPlanets = async () => {
+    const planetsFilter = planets.filter((planet) => {
+      return !planet.moon;
+    });
+    dispatch({ type: "setFilter", payload:planetsFilter });
+  };
+  const showMoons = async () => {
+    console.log(planets);
+    const moonsFilter = planets.filter((planet) => {
+      return planet.moon;
+    });
+    console.log(moonsFilter);
+    dispatch({ type: "setFilter", payload:moonsFilter });
+  };
+
 
   return (
     <div className="planets--section">
       <div className="planets--box-1">
         <h2 className="h2">These are the Planets we offer to travel!</h2>
         <div className="filter--buttons-planets">
-{/* 
+          
         <button onClick={showAll}>ALL</button>
         <button onClick={showPlanets}>PLANETS</button>
-        <button onClick={showMoons}>MOONS</button> */}
+        <button onClick={showMoons}>MOONS</button>
         </div>
       </div>
-      {/* REFACTORIZAR !!!!!! */}
-      <div className="planets--billboard"> 
-        <Render planets={filter}/>
+      <div className="planets--billboard">
+        <Render planets={filter} />
       </div>
     </div>
   );

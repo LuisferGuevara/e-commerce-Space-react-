@@ -12,7 +12,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
         register_user_error: { ...state, error: action.payload },
         logout_user_ok: { ...INITIAL_STATE },
         logout_user_error: { ...state, error: action.payload },
-        user_checksession: { ...state, token: action.payload },
+        user_checksession: { ...state, token: action.payload?.token, user:action.payload?.user },
     };
     
     return trial[action.type] || state;

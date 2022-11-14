@@ -1,15 +1,17 @@
 import React from "react";
-import { SPACE } from "../utils/data/space";
 import "../styles/PlanetInfo.scss";
 import H3 from "../components/H3";
 import { Image } from "../components/Image";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Paragraph from "../components/Paragraph";
+import { useSelector } from "react-redux";
 
-const { planets } = SPACE;
+
 
 const PlanetInfo = () => {
+  const {planets } = useSelector((state) => state.planetsFilter);
+
   const { name } = useParams();
   const navigate = useNavigate();
 
