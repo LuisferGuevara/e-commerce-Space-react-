@@ -2,7 +2,6 @@ const INITIAL_STATE = {
   filter: [],
 };
 const planetsReducer = (state = INITIAL_STATE, action) => {
-
   const trial = {
     setFilter: {...state, filter:action.payload}
   };

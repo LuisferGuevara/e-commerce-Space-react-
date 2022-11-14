@@ -3,19 +3,17 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../redux/Auth/auth.actions";
-import "../styles/Login.scss"
-
+import "../styles/Login.scss";
 
 const Login = () => {
-
   const {
     register,
     handleSubmit,
     formState: { errors },
-} = useForm();
+  } = useForm();
 
-const { error } = useSelector(state => state.auth)
-console.log("QUE HACER",error) 
+  const { error } = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = async (data) => {
@@ -39,7 +37,7 @@ console.log("QUE HACER",error)
             })}
           />
         </label>
-        {console.log(errors)}
+        {error && <p>{error}</p>}
         {errors.email ? (
           <>
             {errors.email.type === "required" && <p>{errors.email.message}</p>}
@@ -50,12 +48,12 @@ console.log("QUE HACER",error)
           Password
           <input type="password" {...register("password")} />
         </label>
-        <button className="glow-on-hover" >
-          Send
-        </button>
+        <button className="glow-on-hover">Send</button>
       </form>
       <span>New to Capsule Corp?</span>
-      <Link to="/register" className="glow-on-hover" >Register Yourself</Link>
+      <Link to="/register" className="glow-on-hover">
+        Register Yourself
+      </Link>
     </div>
   );
 };

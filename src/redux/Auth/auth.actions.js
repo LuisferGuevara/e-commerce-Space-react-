@@ -5,10 +5,11 @@ export const loginUser = (data, navigate) => async (dispatch) => {
   try {
     const result = await API.post("/users/login", data);
     dispatch({ type: "login_user_ok", payload: result.data });
+    console.log(result.data);
     localStorage.setItem("token", result.data.token);
     navigate("/corp");
   } catch (error) {
-    dispatch({ type: "login_user_error", payload: error.message });
+    dispatch({ type: "login_user_error", payload: error.response.data });
   }
 };
 

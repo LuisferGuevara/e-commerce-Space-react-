@@ -1,6 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
+import adminReducer from "./Admin/admin.reducer";
 import authReducer from "./Auth/auth.reducer";
 import footerReducer from "./Footer/footer.reducer";
 import headerReducer from "./Header/header.reducer";
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   header: headerReducer,
   footer:footerReducer,
   planetsFilter: planetsReducer,
+  admin: adminReducer
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
