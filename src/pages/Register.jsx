@@ -49,7 +49,7 @@ const Register = () => {
           Password
           <input type="password" {...register("password")} />
         </label>
-        <button disabled={!isValid} className="glow-on-hover">Send</button>
+        <button className="glow-on-hover">Send</button>
       </form>
     </div>
     </div>

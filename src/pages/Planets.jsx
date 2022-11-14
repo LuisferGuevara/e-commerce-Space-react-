@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SPACE } from "../utils/data/space";
 import "../styles/Planets.scss";
 import Render from "../components/Render";
@@ -10,21 +10,27 @@ const Planets = () => {
   const dispatch = useDispatch();
   const { filter } = useSelector((state) => state.planetsFilter);
 
-  const moonsFilter = planets.filter((planet) => {
-    return planet.moon;
-  });
-  const planetsFilter = planets.filter((planet) => {
-    return !planet.moon;
-  });
+  useEffect(()=>{
+    dispatch({type:"setFilter", payload:planets})
+  },[dispatch])
 
+  
   const showAll = async () => {
-    dispatch({ type: "all" });
+    dispatch({type:"setFilter", payload:planets})
   };
+
   const showPlanets = async () => {
-    dispatch({ type: "planetsFil" });
+    const planetsFilter = planets.filter((planet) => {
+      return !planet.moon;
+    });
+    dispatch({ type: "setFilter", payload:planetsFilter });
   };
+
   const showMoons = async () => {
-    dispatch({ type: "moons" });
+    const moonsFilter = planets.filter((planet) => {
+      return planet.moon;
+    });
+    dispatch({ type: "setFilter", payload:moonsFilter });
   };
 
   return (
@@ -40,9 +46,7 @@ const Planets = () => {
       </div>
       {/* REFACTORIZAR !!!!!! */}
       <div className="planets--billboard"> 
-        <Render planets={filter === "moonsFilter" && moonsFilter} />
-        <Render planets={filter === "planetsFilter" && planetsFilter} />
-        <Render planets={filter === "planets" && planets} />
+        <Render planets={filter}/>
       </div>
     </div>
   );

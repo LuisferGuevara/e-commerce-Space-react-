@@ -12,7 +12,8 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm();
+} = useForm();
+console.log(errors)
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const Login = () => {
             })}
           />
         </label>
+        {console.log(errors)}
         {errors.email ? (
           <>
             {errors.email.type === "required" && <p>{errors.email.message}</p>}
@@ -47,7 +49,7 @@ const Login = () => {
           Password
           <input type="password" {...register("password")} />
         </label>
-        <button disabled={!isValid} onClick={() => dispatch({ type: "setClass" })} className="glow-on-hover" >
+        <button  onClick={() => isValid && dispatch({ type: "setClass" })} className="glow-on-hover" >
           Send
         </button>
       </form>

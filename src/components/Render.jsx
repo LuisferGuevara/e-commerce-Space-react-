@@ -20,9 +20,11 @@ const Render = ({ galaxies, planets }) => {
                   </div>
                 </div>
                 <div className="galaxy--text">
-                  <Paragraph text={galaxy.distance} />
-                  <Paragraph text={galaxy.gravity} />
                   <Paragraph text={galaxy.description} />
+                  <Paragraph text={galaxy.gravity} />
+                  <Paragraph text={galaxy.distance} />
+                  <spam>Prince: {galaxy.price}</spam>
+
                   <button>Buy Experience</button>
                 </div>
               </div>

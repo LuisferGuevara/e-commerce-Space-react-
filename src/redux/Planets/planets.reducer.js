@@ -1,12 +1,10 @@
 const INITIAL_STATE = {
-  filter: "planets",
+  filter: [],
 };
 const planetsReducer = (state = INITIAL_STATE, action) => {
-    
+
   const trial = {
-    all: { ...INITIAL_STATE },
-    moons: { ...state, filter: "moonsFilter" },
-    planetsFil: { ...state, filter: "planetsFilter" },
+    setFilter: {...state, filter:action.payload}
   };
   return trial[action.type] || state;
 };

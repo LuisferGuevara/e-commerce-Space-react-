@@ -20,19 +20,27 @@ const PlanetInfo = () => {
           return (
             <div key={JSON.stringify(planet)} className="card">
               <div className="first-box">
-              <H3 text={planet.name} />
-              <div className="image--box">
-
-                <Image text={planet.image} />
-              </div>
+                <H3 text={planet.name} />
+                <div className="image--box">
+                  <Image text={planet.image} />
+                </div>
               </div>
               <div className="text--box">
-              <div className="text--content">
-                <Paragraph text={planet.description} />
-                <Paragraph text={planet.gravity} />
-                <Paragraph text={planet.distance} />
-              </div>
-                <button onClick={() => navigate("/planets")}>ALL PLANETS OFFERS</button>
+                <div className="text--content">
+                  <H3 text={planet.title} />
+                  <div className="text--yes">
+                  <Paragraph text={planet.description} />
+                  <Paragraph text={planet.gravity} />
+                  <Paragraph text={planet.distance} />
+                  </div>
+                  <div className="buying--box">
+                    <span>{planet.price}</span>
+                    <button>Buy Now</button>
+                  </div>
+                </div>
+                <button className="button" onClick={() => navigate("/planets")}>
+                  ALL PLANETS OFFERS
+                </button>
               </div>
             </div>
           );
