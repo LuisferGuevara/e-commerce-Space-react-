@@ -1,7 +1,6 @@
 import { API } from "../../utils/services/api";
 
 export const loginUser = (data, navigate) => async (dispatch) => {
-
   try {
     const result = await API.post("/users/login", data);
     dispatch({ type: "login_user_ok", payload: result.data });
@@ -9,7 +8,7 @@ export const loginUser = (data, navigate) => async (dispatch) => {
     localStorage.setItem("token", result.data.token);
     navigate("/corp");
   } catch (error) {
-    dispatch({ type: "login_user_error", payload:error.response.data });
+    dispatch({ type: "login_user_error", payload: error.response.data });
   }
 };
 
@@ -36,7 +35,7 @@ export const logOutUser = (navigate) => (dispatch) => {
 export const checkSession = (token, navigate) => async (dispatch) => {
   const result = await API.post("users/checksession");
   console.log(result);
-  dispatch({ type: "user_checksession", payload:{token:token, user:result.data} });
+  dispatch({ type: "user_checksession", payload: { token: token, user: result.data } });
   localStorage.setItem("token", token);
   navigate("/corp");
   dispatch({ type: "setClass" });
