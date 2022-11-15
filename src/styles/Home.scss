@@ -5,16 +5,15 @@
   align-items: center;
   position: relative;
 
-  .image--box{
+  .image--box {
     width: 100vw;
     height: 100%;
-    img{
-        width: 100%;
-        height: 100%;
-
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
- 
+
   .title {
     position: absolute;
     display: flex;
@@ -23,13 +22,11 @@
     align-items: center;
     width: 50%;
     @media screen and (max-width: 800px) {
-        width: 95%;
+      width: 95%;
 
-        margin-top: 8em;
-        
-      }
+      margin-top: 8em;
+    }
     h1 {
-
       font-size: 2.5em;
       line-height: 1.2em;
       padding-left: 1em;
@@ -38,9 +35,7 @@
       padding-bottom: 1em;
       @media screen and (max-width: 800px) {
         font-size: 2em;
-        
       }
-     
     }
     button {
       text-transform: uppercase;
@@ -50,68 +45,65 @@
       background: transparent;
       padding: 1em 1.2em;
       cursor: pointer;
-      
     }
     .button {
-        margin: 50px auto;
-        letter-spacing: 1px;
-        border: 4px solid white;
-        color: white;
-        display: inline-block;
-        line-height: 100%;
-        position: relative;
-        text-decoration: none;
-        z-index: 0;
-        -webkit-transition: border-color .35s ease, background .35s ease;
-        transition: border-color .35s ease, background .35s ease;
+      margin: 50px auto;
+      letter-spacing: 1px;
+      border: 4px solid white;
+      color: white;
+      display: inline-block;
+      line-height: 100%;
+      position: relative;
+      text-decoration: none;
+      z-index: 0;
+      -webkit-transition: border-color 0.35s ease, background 0.35s ease;
+      transition: border-color 0.35s ease, background 0.35s ease;
     }
-    
+
     .button:before {
-        background-color: white;
-        content: "";
-        display: block;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        -webkit-transition: all .4s ease;
-        transition: all .4s ease;
+      background-color: white;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
     }
-    
+
     .button:hover:before {
-        top: 0;
+      top: 0;
     }
-    
-    .button:hover{
-      color:#2A4556;
-      transition:0.25s;
+
+    .button:hover {
+      color: #2a4556;
+      transition: 0.25s;
     }
-    
+
     .button:after {
-        position: absolute;
-        right: 2.34375rem;
-        top: 50%;
-        -webkit-transform: translateY(-50%) translateX(50%);
-        -ms-transform: translateY(-50%) translateX(50%);
-        transform: translateY(-50%) translateX(50%);
-        font-size: 1.75em;
+      position: absolute;
+      right: 2.34375rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%) translateX(50%);
+      -ms-transform: translateY(-50%) translateX(50%);
+      transform: translateY(-50%) translateX(50%);
+      font-size: 1.75em;
     }
-    
+
     .button {
-        padding: .9375rem 1.875rem;
+      padding: 0.9375rem 1.875rem;
     }
-    
   }
 }
-.horse--luis{
-  height: 90vh;
+.horse--luis {
+  height: 92vh;
   width: 100%;
-  img{
+  img {
     height: 100%;
     width: 100%;
     object-fit: contain;
-
   }
 }
