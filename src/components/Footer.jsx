@@ -30,19 +30,19 @@ const Footer = () => {
             </label>
             <ul className="footer__sublist footer__sublist--1">
               <li>
-                <Link to="https://www.spacex.com/" target="_blank">
+                <a href="https://www.spacex.com/" target="_blank" rel="noreferrer">
                   SPACE X
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="https://www.meta.com/" target="_blank">
+                <a href="https://www.meta.com/" target="_blank" rel="noreferrer">
                   META
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="https://www.nasa.gov/" target="_blank">
+                <a href="https://www.nasa.gov/" target="_blank" rel="noreferrer">
                   NASA
-                </Link>
+                </a>
               </li>
             </ul>
           </li>
