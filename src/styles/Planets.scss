@@ -125,9 +125,22 @@ padding: 0 .5em;
     height: 100%;
     width: 100%;
     display: flex;
-    a{
-      color: white
+    &:hover{
+      border-radius: 10%;
     }
+    a{
+      color: white; 
+      &:hover{
+        background-color: white;
+        color: black;
+        padding: .4em;
+      }
+    }
+    button{
+      padding: .2em;
+      text-transform: uppercase;
+    }
+
 
   }
   .hide{

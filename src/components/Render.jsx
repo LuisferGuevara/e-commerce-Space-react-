@@ -1,24 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import H3 from "./H3";
 import { Image } from "./Image";
 import Paragraph from "./Paragraph";
-import "../styles/Galaxies.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { API } from "../utils/services/api";
 import { getPlanets } from "../redux/Planets/planets.action";
-import EditPlanet from "./EditPlanet";
 import CreatePlanet from "./CreatePlanet";
+import "../styles/Galaxies.scss";
 
 const Render = ({ galaxies, planets }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  
+
   const deletePlanet = async (id) => {
     await API.delete("planets/delete/" + id);
     dispatch(getPlanets());
   };
-
 
   return (
     <>
@@ -45,13 +43,12 @@ const Render = ({ galaxies, planets }) => {
             </div>
           );
         })}
-      
-      {user?.rol === "admin" && <CreatePlanet/>}
+
+      {user?.rol === "admin" && <CreatePlanet />}
       {user?.rol === "admin" &&
         planets &&
         planets.map((planet) => {
           return (
-  
             <div key={JSON.stringify(planet)} className="planet--card planet--card__X">
               <H3 text={planet.name} />
               <div className="imagen-container">
@@ -66,16 +63,12 @@ const Render = ({ galaxies, planets }) => {
                 </div>
               </div>
               <div className="buttons--box">
-              <button onClick={() => deletePlanet(planet._id)}>Delete</button>
-              <Link to={`/edit/${planet._id}`}>EDIT</Link>
-
+                <button onClick={() => deletePlanet(planet._id)}>Delete</button>
+                <Link to={`/edit/${planet._id}`}>EDIT</Link>
               </div>
             </div>
-
           );
-        })
-
-        }
+        })}
 
       {user?.rol === "user" &&
         planets &&

@@ -10,9 +10,9 @@ import planetsReducer from "./Planets/planets.reducer";
 const rootReducer = combineReducers({
   auth: authReducer,
   header: headerReducer,
-  footer:footerReducer,
+  footer: footerReducer,
   planetsFilter: planetsReducer,
-  admin: adminReducer
+  admin: adminReducer,
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

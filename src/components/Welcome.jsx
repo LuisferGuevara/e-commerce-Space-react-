@@ -10,7 +10,6 @@ const Welcome = () => {
         {mainDisplay ? (
           <div>
             <div className="bg--welcome">
-              {/* <img src="/assets/sattelite.jpeg " alt="sattel"/> */}
               <img
                 src="https://www.vfxvoice.com/wp-content/uploads/2018/11/PIX-6-NFL_104_402_010_comp_v006.0003.jpg
  "
@@ -20,7 +19,9 @@ const Welcome = () => {
             <div className="welcome--text">
               <p>Welcome to CAPSULE CORP. V I P Space Travel</p>
               <p>Our services are exclusive for Invite Only & Identified User. </p>
-              <button onClick={() => setMainDisplay(false)} className="glow-on-hover" >Identify</button>
+              <button onClick={() => setMainDisplay(false)} className="glow-on-hover">
+                Identify
+              </button>
             </div>
           </div>
         ) : (

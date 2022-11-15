@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Footer.scss";
 import { useSelector } from "react-redux";
 const Footer = () => {
@@ -30,19 +30,19 @@ const Footer = () => {
             </label>
             <ul className="footer__sublist footer__sublist--1">
               <li>
-                <NavLink to="https://www.spacex.com/" target="_blank">
+                <Link to="https://www.spacex.com/" target="_blank">
                   SPACE X
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="https://www.meta.com/" target="_blank">
+                <Link to="https://www.meta.com/" target="_blank">
                   META
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="https://www.nasa.gov/" target="_blank">
+                <Link to="https://www.nasa.gov/" target="_blank">
                   NASA
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </li>

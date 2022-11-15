@@ -15,7 +15,7 @@ const CreatePlanet = () => {
     }
   return (
   <div className="creating--box">
-  <h2>LET'S BE RICHER. LET'S CREATE A NEW OFFER</h2>
+  <h2>LET'S BE RICHER.LET'S CREATE A <span>NEW OFFER</span></h2>
     <form onSubmit={handleSubmit(create)} className="create--form">
         <label>
           Name

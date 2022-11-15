@@ -3,25 +3,28 @@ import "../styles/Planets.scss";
 import Render from "../components/Render";
 import { useDispatch, useSelector } from "react-redux";
 import { getPlanets } from "../redux/Planets/planets.action";
-import CreatePlanet from "../components/CreatePlanet";
+
 
 const Planets = () => {
   const dispatch = useDispatch();
   const { filter, planets } = useSelector((state) => state.planetsFilter);
 
-
-  useEffect(() => {dispatch(getPlanets());}, [dispatch]);
-  useEffect(() => {dispatch({type:"setFilter", payload:planets});}, [dispatch, planets]);
+  useEffect(() => {
+    dispatch(getPlanets());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch({ type: "setFilter", payload: planets });
+  }, [dispatch, planets]);
 
   const showAll = async () => {
-    dispatch({type:"setFilter", payload:planets})
+    dispatch({ type: "setFilter", payload: planets });
   };
 
   const showPlanets = async () => {
     const planetsFilter = planets.filter((planet) => {
       return !planet.moon;
     });
-    dispatch({ type: "setFilter", payload:planetsFilter });
+    dispatch({ type: "setFilter", payload: planetsFilter });
   };
   const showMoons = async () => {
     console.log(planets);
@@ -29,19 +32,17 @@ const Planets = () => {
       return planet.moon;
     });
     console.log(moonsFilter);
-    dispatch({ type: "setFilter", payload:moonsFilter });
+    dispatch({ type: "setFilter", payload: moonsFilter });
   };
-
 
   return (
     <div className="planets--section">
       <div className="planets--box-1">
         <h2 className="h2">These are the Planets we offer to travel!</h2>
         <div className="filter--buttons-planets">
-          
-        <button onClick={showAll}>ALL</button>
-        <button onClick={showPlanets}>PLANETS</button>
-        <button onClick={showMoons}>MOONS</button>
+          <button onClick={showAll}>ALL</button>
+          <button onClick={showPlanets}>PLANETS</button>
+          <button onClick={showMoons}>MOONS</button>
         </div>
       </div>
 

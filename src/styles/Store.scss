@@ -1,0 +1,30 @@
+.sgtore {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.img--box {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    height: 92%;
+  }
+  width: 100%;
+}
+.add {
+  background-color: orange;
+  padding: 0.5em;
+  height: fit-content;
+  position: absolute;
+  font-size: 1.4em;
+  line-height: 1em;
+  letter-spacing: 1px;
+  text-align: center;
+  right: 0;
+  top: 10%;
+  width: 100%;
+  text-transform: uppercase;
+}

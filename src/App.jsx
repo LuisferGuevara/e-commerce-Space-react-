@@ -15,8 +15,8 @@ import { useEffect } from "react";
 import { checkSession } from "./redux/Auth/auth.actions";
 import Authroute from "./components/Authroute";
 import Footer from "./components/Footer";
-import Admin from "./pages/Admin";
 import EditPlanet from "./components/EditPlanet";
+import Store from "./pages/Store";
 
 function App() {
 
@@ -44,7 +44,7 @@ function App() {
 
         </Route>
         <Route path="/galaxies" element={<Authroute component={<Galaxies />}/>}/>
-        <Route path="/admin" element={<Authroute component={<Admin />}/>}/>
+        <Route path="/store" element={<Authroute component={<Store />}/>}/>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Routes>
