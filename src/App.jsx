@@ -16,6 +16,7 @@ import { checkSession } from "./redux/Auth/auth.actions";
 import Authroute from "./components/Authroute";
 import Footer from "./components/Footer";
 import Admin from "./pages/Admin";
+import EditPlanet from "./components/EditPlanet";
 
 function App() {
 
@@ -36,6 +37,11 @@ function App() {
         <Route path="/planets">
           <Route index element={<Authroute component={<Planets />}/>}/>
           <Route path=":name" element={<Authroute component={<PlanetInfo />}/>}/>
+        </Route>
+        <Route path="/edit">
+          <Route index element={<Authroute component={<Planets />}/>}/>
+        <Route path=":id" element={<Authroute component={<EditPlanet/>}/>}/>
+
         </Route>
         <Route path="/galaxies" element={<Authroute component={<Galaxies />}/>}/>
         <Route path="/admin" element={<Authroute component={<Admin />}/>}/>

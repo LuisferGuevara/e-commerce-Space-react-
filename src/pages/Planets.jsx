@@ -3,6 +3,7 @@ import "../styles/Planets.scss";
 import Render from "../components/Render";
 import { useDispatch, useSelector } from "react-redux";
 import { getPlanets } from "../redux/Planets/planets.action";
+import CreatePlanet from "../components/CreatePlanet";
 
 const Planets = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,8 @@ const Planets = () => {
         <button onClick={showMoons}>MOONS</button>
         </div>
       </div>
-      <div className="planets--billboard">
+
+      <div className="planets--billboard billboard--admin">
         <Render planets={filter} />
       </div>
     </div>

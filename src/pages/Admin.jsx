@@ -1,5 +1,7 @@
 import React from 'react'
 import CreatePlanet from '../components/CreatePlanet'
+import EditPlanet from '../components/EditPlanet'
+
 
 
 const Admin= () => {
@@ -8,8 +10,8 @@ const Admin= () => {
   return (
   
     <div>
-    <CreatePlanet/>
-PUT?(MODIFY) POST(CREATE) DELEETE()
+    <img src="/assets/loop.png" alt="lost"/>
+
     </div>
   )
 }

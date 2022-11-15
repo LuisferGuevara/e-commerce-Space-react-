@@ -7,20 +7,18 @@ import "../styles/Galaxies.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { API } from "../utils/services/api";
 import { getPlanets } from "../redux/Planets/planets.action";
+import EditPlanet from "./EditPlanet";
+import CreatePlanet from "./CreatePlanet";
 
 const Render = ({ galaxies, planets }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  const { initialClass } = useSelector((state) => state.planetsFilter);
-  console.log(initialClass);
   
   const deletePlanet = async (id) => {
     await API.delete("planets/delete/" + id);
-    // dispatch({ type: "setClass", payload: "hide" });
-    // dispatch({type:"getPlanets", payload:planets})
-    window.location.reload(false)
-    
+    dispatch(getPlanets());
   };
+
 
   return (
     <>
@@ -47,11 +45,13 @@ const Render = ({ galaxies, planets }) => {
             </div>
           );
         })}
-
+      
+      {user?.rol === "admin" && <CreatePlanet/>}
       {user?.rol === "admin" &&
         planets &&
         planets.map((planet) => {
           return (
+  
             <div key={JSON.stringify(planet)} className="planet--card planet--card__X">
               <H3 text={planet.name} />
               <div className="imagen-container">
@@ -65,10 +65,17 @@ const Render = ({ galaxies, planets }) => {
                   <Paragraph text={planet.distance} />
                 </div>
               </div>
+              <div className="buttons--box">
               <button onClick={() => deletePlanet(planet._id)}>Delete</button>
+              <Link to={`/edit/${planet._id}`}>EDIT</Link>
+
+              </div>
             </div>
+
           );
-        })}
+        })
+
+        }
 
       {user?.rol === "user" &&
         planets &&

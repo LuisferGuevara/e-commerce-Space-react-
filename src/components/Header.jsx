@@ -55,7 +55,7 @@ const Header = () => {
           </li>
           <li className="header-li">
             <NavLink to="admin" activeclassname={"active"}>
-              VIP
+              Store
             </NavLink>
           </li>
           <li className="header-li">
