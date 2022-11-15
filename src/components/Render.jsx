@@ -23,6 +23,7 @@ const Render = ({ galaxies, planets }) => {
       {galaxies &&
         galaxies.map((galaxy) => {
           return (
+            <div className="galaxies--section">
             <div key={JSON.stringify(galaxy)} className="galaxies--container">
               <div className="galaxy-card">
                 <div className="galaxy--main">
@@ -40,6 +41,7 @@ const Render = ({ galaxies, planets }) => {
                   <button>Buy Experience</button>
                 </div>
               </div>
+            </div>
             </div>
           );
         })}

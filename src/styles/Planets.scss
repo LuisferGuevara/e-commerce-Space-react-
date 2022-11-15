@@ -1,5 +1,6 @@
 .planets--section {
   height: 100%;
+
   width: 100%;
 }
 .planets--box-1 {
@@ -100,11 +101,13 @@
 }
 
 .planets--billboard {
-  height: 90vh;
+
+  height: 100%;
   padding: 2em 0.5em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 40px;
+  padding-bottom: 4%;
   .planet--card {
     h3 {
       text-transform: uppercase;
