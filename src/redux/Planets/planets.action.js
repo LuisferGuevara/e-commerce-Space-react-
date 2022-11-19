@@ -9,5 +9,3 @@ export const getPlanets = (navigate) => async (dispatch) => {
     dispatch({ type: "planets_error", payload: error.response?.data });
   }
 };
-
-

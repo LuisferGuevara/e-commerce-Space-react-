@@ -64,10 +64,9 @@
         font-weight: bolder;
         cursor: pointer;
         border: 1px solid white;
-       background-color: #000;
-       width: 20%;
-       height: 30px;
-       
+        background-color: #000;
+        width: 20%;
+        height: 30px;
       }
     }
     h1 {
@@ -92,9 +91,8 @@
       }
     }
   }
-  span{
-
-    padding: .5em 0;
+  span {
+    padding: 0.5em 0;
   }
 }
 .glow-on-hover {
@@ -102,8 +100,8 @@
   text-align: center;
   display: flex;
 
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 220px;
   height: 50px;
   border: none;

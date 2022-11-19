@@ -7,5 +7,4 @@ import Login from "./Login";
 import Welcome from "../components/Welcome";
 import Admin from "./Store";
 
-
-export { Home, Galaxies, Planets, Admin, PlanetInfo, Login, Register, Welcome }
+export { Home, Galaxies, Planets, Admin, PlanetInfo, Login, Register, Welcome };

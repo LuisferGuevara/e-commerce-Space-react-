@@ -15,7 +15,6 @@ const Header = () => {
 
   return (
     <header className={displayClass}>
-
       <Link to={"corp"}>
         <p>CAPSULE CORP.</p>
       </Link>

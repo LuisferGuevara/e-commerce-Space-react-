@@ -3,7 +3,6 @@ const INITIAL_STATE = {
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {
-    
   const trial = {
     setClass: { ...state, displayClass: "header" },
     original: { ...INITIAL_STATE },

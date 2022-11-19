@@ -7,10 +7,8 @@ import { useNavigate } from "react-router-dom";
 import Paragraph from "../components/Paragraph";
 import { useSelector } from "react-redux";
 
-
-
 const PlanetInfo = () => {
-  const {planets } = useSelector((state) => state.planetsFilter);
+  const { planets } = useSelector((state) => state.planetsFilter);
 
   const { name } = useParams();
   const navigate = useNavigate();
@@ -31,9 +29,9 @@ const PlanetInfo = () => {
                 <div className="text--content">
                   <H3 text={planet.title} />
                   <div className="text--yes">
-                  <Paragraph text={planet.description} />
-                  <Paragraph text={planet.gravity} />
-                  <Paragraph text={planet.distance} />
+                    <Paragraph text={planet.description} />
+                    <Paragraph text={planet.gravity} />
+                    <Paragraph text={planet.distance} />
                   </div>
                   <div className="buying--box">
                     <span>{planet.price}</span>
